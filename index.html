@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UFT-8">
+        <meta name="viewpoint" content="width=device-width",initialise>  
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
+         <title> cm ice creams and snack center
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="about.html">
+        <h1>CM ICE CREAMS AND SNACK CENTER</h1>
+        <style>
+            h1 {
+            font-style: normal;
+            color: coral;
+            text-align: center;
+            font-weight: bold;
+
+            
+        }
+
+            
+
+        
+         p.username {
+                font-weight: bold;
+            }
+            em {
+                color: white;
+                font-style: normal;
+            }
+            .menu ul {
+                display: inline-block;
+                color: white;
+                
+            }
+            .menu ul li a{
+                text-decoration: none;
+               
+
+
+            }
+            .menu ul li{
+                list-style: none;
+                margin-left: 70px;
+                padding-left: 80px;
+                .menu {
+      background-color: red;
+   }
+            }
+            .home{
+    background-color: red;
+    color: white;
+    border: none;
+    height: 36PX;
+    width: 105PX;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 6px;
+   }
+        .container {
+            position: relative;
+            width: 300px; /* Set the width of the container */
+        }
+
+        p {
+            margin: 0;
+        }
+
+        #droppable {
+            position: absolute;
+            top: 100%; /* Position the image below the paragraph */
+            left: 0;
+            display: none; /* Initially hide the image */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="droppable" src="vanilla2.jpg" alt="Dropped Image">
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+        const droppable = document.getElementById('droppable');
+
+        // Prevent the default behavior of the browser when an image is dragged over it
+        container.addEventListener('dragover', (e) => {
+            e.preventDefault();
+        });
+
+        // When an image is dropped, display it below the paragraph
+        container.addEventListener('drop', (e) => {
+            e.preventDefault();
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    droppable.src = event.target.result;
+                    droppable.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <div class="menu">
+                <ul><li><a href="/index.html">Home</a></li></ul>
+                <ul><li><a href="flo.html">Flavors</a></li></ul>
+                <ul><li><a href="/about.html">About Us</a></li></ul>
+                <ul><li><a href="/conta.html">Contact Us</a></li></ul>
+               
+        </header>
+
+<p class="username">Feel like taking some <em>ice cream</em>!</p>
+<p>Cm ice creams and snack center is the solution</p>
+<p> Delicious and chilling</p>
+<p>Enjoy the best flavours</p>
+<p>Our flavors includes vanilla,strawberry,chocolate,Pineapple,and Blueberry which all comes in our tinned ice, various corns which includes waffle corns of all kinds,frozen treats in glasses all to give you the best taste yummy and mouthwatering locally made ice cream</p>
+
+<img src="melting-ice-cream.jpg" style="width: 100px;height: 200px;">
+ <p>Quality icecream is all we provide</p>
+ <p>No one makes quality icecream like us</p>
+ <p>We provide the most Delicious and classy icecream at unbeatable prices</p>
+ 
+ <img id="droppable" src="vanilla2.jpg" alt="Dropped Image">
+ 
+    </body>
+
+</html>
